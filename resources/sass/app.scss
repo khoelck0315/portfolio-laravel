@@ -1,0 +1,30 @@
+// Fonts
+@import url('https://fonts.bunny.net/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// Variables
+@import 'variables';
+
+// Bootstrap core
+@import 'bootstrap/scss/bootstrap';
+
+// Bootstrap Overrides
+@import 'custom';
+
+
+body {
+    background: $body-bg;
+}
+
+.body-secondary {
+    background: $cyan-100;
+}
+
+.img-icon {
+    padding: 10px 5px;
+    transition: transform .5s;
+}
+
+.img-icon:hover {
+    transform: scale(1.1, 1.1);
+}

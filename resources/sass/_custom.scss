@@ -1,0 +1,10 @@
+/*Example of over-riding bootstrap defaults*/
+
+.nav-link {
+    color: $nav-links;
+}
+
+.nav-item {
+    padding-left: 10px;
+    padding-right: 10px;
+}

@@ -1,0 +1,204 @@
+:root {
+  --shadow-y-offset: -10px;
+  --effect-color: #000000;
+  --php-color: #535c7f;
+  --mysql-color: #905900;
+  --css-color: #163298;
+  --js-color: #c3b33f;
+  --dotnet-color: #321886;
+  --powershell-color: #4B83E5;
+  --main-color: #00ff01;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+/*Initial view page*/
+@keyframes mainview {
+  0% { opacity: 100%; }
+  5% { opacity: 5%; }
+  100% {opacity: 0%;}
+}
+.mainview {
+    animation: mainview linear;
+    animation-timeline: scroll();
+}
+
+
+.headings {
+  animation-name: heading-fade-in;
+  animation-duration: 1s;
+  animation-play-state: running;
+}
+@keyframes heading-fade-in {
+  from {
+    transform: translateX(-40px);
+    opacity: 0%;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+}
+
+@media (max-width: 1119px) {
+  .monitor {
+    width: 515px;
+    max-width: 93vw;
+    height: 300px;
+  }
+  .stand-riser {
+    width: 150px;
+    height: 50px;
+  }
+  .stand-base {
+    width: 300px;
+    height: 15px;
+  }
+  #introtext {
+    height: 85%;
+  }
+  #vim-footer {
+    height: 15%;
+  }
+}
+@media (min-width: 1120px) {
+  .monitor {
+    width:750px;
+    height: 500px;
+  }
+  .stand-riser {
+    width: 150px;
+    height: 50px;
+  }
+  .stand-base {
+    width: 300px;
+    height: 15px;
+  }
+  #introtext {
+    height: 91%;
+  }
+  #vim-footer {
+    height: 9%;
+  }
+}
+.monitor {
+  overflow-y: hidden;
+  overflow-x: hidden;
+  container-name: monitor;
+  container-type: size;
+  border: solid 1em #777;
+  border-radius:.5em;
+  color: var(--main-color);
+}
+
+.stand-riser, .stand-base {
+  background: #333;
+}
+.stand-base {
+  border-top-left-radius:.5em;
+  border-top-right-radius:.5em;
+}
+.filler-tilde {
+  color: rgb(27,163,203);
+}
+
+/*Languages scroller*/
+.languages {
+  width: 50%;
+  text-align: center;
+  align-self: flex-end;
+  color: white;
+}
+@keyframes language {
+  0% {
+    opacity: 20%;
+  }
+  5% {
+    opacity: 30%;    
+  }
+  10% {
+    transform: rotate(0deg) scale(1.25);
+    opacity: 70%;
+  }
+  20% {
+    transform: scale(1.5);
+    opacity: 100%;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 20%;
+  }
+}
+.language {
+  padding-left: 125px;
+  padding-right: 125px;
+  padding-bottom: 100vh;
+  font-size: 4rem;
+  transition: all 1s;
+  height: 128px;
+  width: 160px;
+  animation: language linear;
+  animation-timeline: view();
+}
+.language:last-of-type {
+  padding-bottom: 55vh;
+}
+
+.language-placeholder {
+  padding-left: 125px;
+  padding-right: 125px;
+  padding-bottom: 100vh;
+}
+.language img {
+  height: 160px;
+  width: 160px;
+}
+#css img {
+  height: 200px;
+  width: 160px;
+}
+#php img, #mysql img {
+  height: 128px;
+  width: 180px;
+}
+
+#languagetag {
+  transition: color 350ms;
+  padding-bottom: 50vh;
+  text-shadow: -10px var(--shadow-y-offset) 10px var(--effect-color);
+  color: var(--effect-color);
+  font-weight: bold;
+  opacity: 50%;
+  animation-name: languagetag-fade-in;
+  animation-timeline: scroll();
+}
+@keyframes languagetag-fade-in
+{
+  0% {
+    opacity: 0%;
+  }
+  40% {
+    opacity: 90%
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+.stickytag {
+  position:sticky;
+  top: 20vh;
+  align-self: flex-start;
+}
+ 
+/*Frameworks section*/
+.frameworks-img {
+  max-height: 180px;
+  max-width: 120px;
+}
