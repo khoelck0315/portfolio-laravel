@@ -3,6 +3,12 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Config;
+use App\Models\Github\GithubApiData;
+use App\Models\Github\GithubWrapper;
+use Cristal\ApiWrapper\Transports\Transport;
+use Curl\Curl;
+
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -11,7 +17,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+
+
     }
 
     /**
@@ -19,6 +26,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+
     }
 }

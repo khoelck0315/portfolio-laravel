@@ -18,7 +18,7 @@
     @endif
     <!--end example-->
 
-    <section class="container-fluid" style="scroll-behavior: smooth">
+    <section class="container-fluid">
         <!--Change glow based on position of elements-->
         <div class="row mainview align-items-center h-100">
             <div class="col-md-4 text-dark">
@@ -66,6 +66,7 @@
             </div>
              <div class="col-md-8 ps-5 pe-5">
                 <img class="frameworks-img img-icon" src="images/laravel-logo.png" alt="Laravel" title="Laravel">
+                <img class="frameworks-img img-icon" src="images/blazor-logo.png" alt="Blazor" title="Blazor">
                 <img class="frameworks-img img-icon" src="images/bootstrap-logo.png" alt="Bootstrap" title="Bootstrap">
                 <img class="frameworks-img img-icon" src="images/tailwind-logo.png" alt="Tailwind CSS" title="Tailwind CSS">
                 <img class="frameworks-img img-icon" src="images/react-logo.png" alt="React" title="React">
@@ -82,26 +83,27 @@
             </div>
         </div>
     </section>
-    <section id="about" class="container-fluid p-5">
+    <section id="about" class="container-fluid mt-5 mb-5 p-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <h1>About Me</h1>
                 <p> I first started in the IT field four years ago after deciding it was time for a career change.  I began homelabbing, dabbling in web development, and working to obtain various certifications
-                    including Comptia A+/Net+/Sec+ and Cisco CCNA.  After some time I landed my first job as a network administrator and continued to learn and work my way up.  Strangely, this role also included
-                    maintaining the company public website and agent/employee portal, but I was up for the task.  I honed my development skills alongside my other roles and responsibilities as a network administrator.  Working for a smaller
-                    company has allowed me to 'drink from the firehose' and gain exposure to many different disciplines.  What I've discovered along the way is that development is by far my passion and specialty.
-                    I have been able to learn and continually provide solutions.  I would love the opportunity to do so in a development focused role!
+                    including Comptia A+/Net+/Sec+ and Cisco CCNA.  After some time I landed my first job as a network administrator and continued to learn and grow.  In an unusual twist to this role, this also included
+                    maintaining the company public website and agent/employee portal, but I was up for the task.  In addition to the websites, I also had opportunities along the way to develop various
+                    webservices that are being heavily used in production.  Working for a smaller company has allowed me to 'drink from the firehose' and gain exposure to many different disciplines.  What I've discovered
+                    along the way is that development is by far my passion and specialty.  I have been able to learn and continually provide solutions, and I would love the opportunity to do so 
+                    for your company!
                 </p>
 
                 <p> I currently work as a Security and Tech Services manager.  Some of my responsibilities include:</p>
                     <ul>
-                        <li>Lead a team of four Network and System Administrators as a working manager</li>
-                        <li>Delegate daily tasks, implemented procedures, and oversaw long term projects such as server OS upgrades, Office 365 migration, and web integrations.</li>
-                        <li>Provide mentorship and support to other administrators as needed.</li>
-                        <li>Participate in the annual budget process and purchase equipment and services.</li>
-                        <li>Review resumes and conduct technical interviews and hiring of candidates across the IT department.</li>
-                        <li>Oversee and code review scripting, automation, and web contributions by team.</li>
-                        <li>Continue other prior duties such as web development, systems and network administration, vulnerability management, and automation.</li>
+                        <li>Leading a team of four Network and System Administrators as a working manager</li>
+                        <li>Delegating daily tasks, implementing procedures, and overseeing long term projects such as server OS upgrades, Office 365 migration, and web integrations.</li>
+                        <li>Providing mentorship and support to other administrators as needed.</li>
+                        <li>Participating in the annual budget process and purchasing equipment and services.</li>
+                        <li>Reviewing resumes and conducting technical interviews for hiring of candidates across the IT department.</li>
+                        <li>Overseeing and code review scripting, automation, and web contributions by team.</li>
+                        <li>Continuing other prior duties such as web development, systems and network administration, vulnerability management, and automation.</li>
                     </ul>
                 <p> If you are an employer or recruiter and wish to obtain a copy of my resume, <a href="{{ route('contact') }}">please contact me here</a></p>
             </div>

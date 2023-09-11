@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PortfolioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +21,7 @@ Route::get('/', function () {
 Route::get('/contact', function() {
     return "Contact Form!";
 })->name('contact');
+
+Route::get('/portfolio', PortfolioController::class)->name('portfolio');
 
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
