@@ -11,15 +11,15 @@
         </li>
         <li class="nav-item">
           <!--Add onclick logic to make active since it's an in page link-->
-          <a class="nav-link" aria-current="page" href="#about">About</a>
+          <a class="nav-link" aria-current="page" href="/#about">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ route("portfolio") }}">Portfolio</a>
+          <a class="nav-link" href="/portfolio">Portfolio</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="{{ route("contact") }}">Contact</a>
         </li>
-        <li class="nav-item dropdown">
+        <!--<li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Utilities
           </a>
@@ -29,7 +29,7 @@
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
-        </li>
+        </li>-->
 
       </ul>
     </div>

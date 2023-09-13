@@ -1,4 +1,4 @@
-<footer class="container-fluid bg-black">
+<footer class="container-fluid mt-auto bg-black">
     <div class="row align-items-center">
         <div class="col-2 p-3 text-light">
             <div class="d-flex flex-column align-items-center">

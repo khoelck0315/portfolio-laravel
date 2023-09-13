@@ -17,11 +17,14 @@
         @vite(['resources/sass/app.scss', 'resources/js/bootstrap.js'])
         
     <body class="bg-body antialiased">
-        <x-navbar/>
+        <main class="page-wrapper">
 
-        {{ $slot }} 
+            @include('components.navbar')
 
-        <x-footer/>
-        
+            @yield('content') 
+
+            @include('components.footer')
+            
+        </main>
     </body>
 </html>
