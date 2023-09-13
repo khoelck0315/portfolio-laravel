@@ -29,7 +29,7 @@ typewriter.type("[khoelck0315@localdev portfolio]$&nbsp;", {instant:true, delay:
 typewriter.exec(() => {
   document.getElementById("vim-footer").style.visibility = "visible";
 })
-let lines = 20
+let lines = 22
 while (lines > 0) {
   typewriter.type('~', {instant: true}).break();
   lines--;

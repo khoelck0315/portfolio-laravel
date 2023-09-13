@@ -15,13 +15,18 @@ use App\Http\Controllers\PortfolioController;
 */
 
 Route::get('/', function () {
-    return view('welcome', ['title' => "Kevin Hoelck Portfolio - Home"]);
+    return view('home', ['title' => "Kevin Hoelck Portfolio - Home"]);
 })->name('home');
 
 Route::get('/contact', function() {
     return "Contact Form!";
 })->name('contact');
 
-Route::get('/portfolio', PortfolioController::class)->name('portfolio');
+Route::controller(PortfolioController::class)->group(function() {
+    Route::get('/portfolio', 'myPortfolio');
+    Route::post('/portfolio', 'userGithub');
+});
 
+//Route::get('/portfolio', PortfolioController::class)->name('portfolio');
+//Route::post('/portfolio')
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

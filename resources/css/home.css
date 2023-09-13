@@ -10,15 +10,6 @@
   --main-color: #00ff01;
 }
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  font-family: "Roboto", sans-serif;
-}
-
 /*Initial view page*/
 @keyframes mainview {
   0% { opacity: 100%; }
@@ -96,6 +87,9 @@ body {
   border: solid 1em #777;
   border-radius:.5em;
   color: var(--main-color);
+  font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+  font-size: 12px;
+  letter-spacing: 0px;
 }
 
 .stand-riser, .stand-base {

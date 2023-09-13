@@ -2,10 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Http;
-
+use Illuminate\Support\Facades\Config;
 
 abstract class ApiModel
 {
@@ -14,21 +12,29 @@ abstract class ApiModel
         // Logic to build URL here
     }
 
+    
     public static function find($search) {
         $class = get_called_class();
         $url = $class::apiUrl($search);
-        $response = Http::get($url);
-        $data = $response->json();
+        $github = Config::get('services.github');
+        $response = Http::withToken($github['pat'])->get($url);
 
-        // Check to see the response contains a result or collection of results
-        if(array_is_list($data)) {
-            $collection = array();
-            foreach($data as $result) {
-                $row = new $class($result);
-                array_push($collection, $row);
+        if($response->successful()) {
+            $data = $response->json();
+
+            // Check to see the response contains a result or collection of results
+            if(array_is_list($data)) {
+                $collection = array();
+                foreach($data as $result) {
+                    $row = new $class($result);
+                    array_push($collection, $row);
+                }
+                return $collection;
             }
-            return $collection;
+            else return new $class($data);
         }
-        else return new $class($data);
+        else {
+            return false;
+        } 
     }
 }
