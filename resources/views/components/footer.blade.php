@@ -35,7 +35,7 @@
                     <a class="link-light" href="{{ route("home") }}">Home</a>
                 </li>
                 <li>
-                    <a class="link-light" href="{{ route('contact') }}">Contact</a>
+                    <a class="link-light" href="/contact">Contact</a>
                 </li>
                 <li>
                     <a class="link-light" href="#">Back to Top</a>

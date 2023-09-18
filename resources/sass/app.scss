@@ -24,6 +24,10 @@ body {
     background: $body-bg;
 }
 
+textarea {
+    resize: none;
+}
+
 .page-wrapper {
     display: flex;
     min-height: 100vh;

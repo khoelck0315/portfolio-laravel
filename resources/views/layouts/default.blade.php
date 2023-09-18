@@ -10,9 +10,7 @@
         <!-- These should actually go in the app.scss file -->
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
-        
-        <!--Placeholder for tailwind until discarded-->
-        <!--<script src="https://cdn.tailwindcss.com"></script>-->
+        <script src="https://kit.fontawesome.com/1cc9fa9b83.js" crossorigin="anonymous"></script>
 
         @vite(['resources/sass/app.scss', 'resources/js/bootstrap.js'])
         
