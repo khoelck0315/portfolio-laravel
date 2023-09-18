@@ -69,28 +69,19 @@ ADD SASS-->
                 <h2>I also work with the following frameworks, software, and utilities:</h2>
             </div>
              <div class="col-md-8 ps-5 pe-5">
-                <img class="frameworks-img img-icon" src="images/laravel-logo.png" alt="Laravel" title="Laravel">
-                <img class="frameworks-img img-icon" src="images/blazor-logo.png" alt="Blazor" title="Blazor">
-                <img class="frameworks-img img-icon" src="images/bootstrap-logo.png" alt="Bootstrap" title="Bootstrap">
-                <img class="frameworks-img img-icon" src="images/tailwind-logo.png" alt="Tailwind CSS" title="Tailwind CSS">
-                <img class="frameworks-img img-icon" src="images/sass-logo.png" alt="Sass" title="Sass">
-                <img class="frameworks-img img-icon" src="images/react-logo.png" alt="React" title="React">
-                <img class="frameworks-img img-icon" src="images/phpmyadmin-logo.png" alt="phpMyAdmin" title="phpMyAdmin"/>
-                <img class="frameworks-img img-icon" src="images/postman-logo.png" alt="Postman" title="Postman"/>
-                <img class="frameworks-img img-icon" src="images/paintdotnet-logo.png" alt="PaintDotNet" title="PaintDotNet"/>
-                <img class="frameworks-img img-icon" src="images/inkscape-logo.png" alt="Inkscape" title="Inkscape"/>
-                <img class="frameworks-img img-icon" src="images/vscode-logo.png" alt="VSCode" title="VSCode"/>
-                <img class="frameworks-img img-icon" src="images/nodejs-logo.png" alt="NodeJS" title="NodeJS"/>
-                <img class="frameworks-img img-icon" src="images/npm-logo.png" alt="NPM" title="NPM"/>
-                <img class="frameworks-img img-icon" src="images/vite-logo.png" alt="Vite" title="Vite">
-                <img class="frameworks-img img-icon" src="images/apache-logo.png" alt="Apache" title="Apache"/>
-                <img class="frameworks-img img-icon" src="images/tomcat-logo.png" alt="Tomcat" title="Tomcat"/>
+                @foreach($technologies as $technology)
+
+                    <img class="frameworks-img img-icon" src="{{ $technology->src }}" alt="{{ $technology->title }}" title="{{ $technology->title }}"/>
+                    
+                @endforeach
             </div>
         </div>
     </section>
     <section id="about" class="container-fluid mt-5 mb-5 p-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
+                <!-- Show icons for certifications-->
+                
                 <h1>About Me</h1>
                 <p> I first started in the IT field four years ago after deciding it was time for a career change.  I began homelabbing, dabbling in web development, and working to obtain various certifications
                     including Comptia A+/Net+/Sec+ and Cisco CCNA.  After some time I landed my first job as a network administrator and continued to learn and grow.  In an unusual twist to this role, this also included
@@ -110,7 +101,7 @@ ADD SASS-->
                         <li>Overseeing and code review scripting, automation, and web contributions by team.</li>
                         <li>Continuing other prior duties such as web development, systems and network administration, vulnerability management, and automation.</li>
                     </ul>
-                <p> If you are an employer or recruiter and wish to obtain a copy of my resume, <a href="{{ route('contact') }}">please contact me here</a></p>
+                <p> If you are an employer or recruiter and wish to obtain a copy of my resume, <a href="/contact">please contact me here</a></p>
             </div>
         </div>
     </section>
