@@ -1,7 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\MessageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,19 +16,18 @@ use App\Http\Controllers\PortfolioController;
 |
 */
 
-Route::get('/', function () {
-    return view('home', ['title' => "Kevin Hoelck Portfolio - Home"]);
-})->name('home');
+Route::get('/', HomeController::class)->name('home');
 
-Route::get('/contact', function() {
-    return "Contact Form!";
-})->name('contact');
+Route::controller(MessageController::class)->group(function() {
+    Route::get('/contact', 'compose');
+    Route::post('/contact', 'send');
+});
 
 Route::controller(PortfolioController::class)->group(function() {
     Route::get('/portfolio', 'myPortfolio');
     Route::post('/portfolio', 'userGithub');
 });
 
-//Route::get('/portfolio', PortfolioController::class)->name('portfolio');
-//Route::post('/portfolio')
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::view('/thankyou', 'thankyou');
+
+
