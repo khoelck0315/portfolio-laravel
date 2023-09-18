@@ -34,7 +34,6 @@ ADD SASS-->
             </div>
             <div class="col-md-8 d-flex justify-content-center">
                 <div class="d-flex justify-content-center flex-column">
-                    <!--TODO CONSOLAS FONT-->
                     <div class="monitor bg-black">
                         <p id="introtext" ></p>
                         <div id="vim-footer" class="d-flex justify-content-between pe-3 ps-3" style="visibility: hidden;">
@@ -82,16 +81,20 @@ ADD SASS-->
             <div class="col-md-8">
                 <!-- Show icons for certifications-->
                 
-                <h1>About Me</h1>
-                <p> I first started in the IT field four years ago after deciding it was time for a career change.  I began homelabbing, dabbling in web development, and working to obtain various certifications
-                    including Comptia A+/Net+/Sec+ and Cisco CCNA.  After some time I landed my first job as a network administrator and continued to learn and grow.  In an unusual twist to this role, this also included
-                    maintaining the company public website and agent/employee portal, but I was up for the task.  In addition to the websites, I also had opportunities along the way to develop various
-                    webservices that are being heavily used in production.  Working for a smaller company has allowed me to 'drink from the firehose' and gain exposure to many different disciplines.  What I've discovered
-                    along the way is that development is by far my passion and specialty.  I have been able to learn and continually provide solutions, and I would love the opportunity to do so 
-                    for your company!
+                <h1 class="mb-3">About Me</h1>
+                <h3 class="mt-4"><i class="pe-3 fa-solid fa-pen-to-square"></i>Background</h3>
+                <p class="p-2">
+                    I first started in the IT field four years ago after deciding it was time for a career change.  I began homelabbing, dabbling in web development, and working to obtain various certifications
+                    including Comptia A+/Net+/Sec+ and Cisco CCNA.  After some time, I was able to land my first job as a network administrator and continued to learn and grow.
                 </p>
-
-                <p> I currently work as a Security and Tech Services manager.  Some of my responsibilities include:</p>
+                <p class="p-2">
+                    In an unusual twist to this type of role, this also included maintaining the company public website and agent/employee portal.  I found this to be the most enjoyable part of my responsibilities
+                    here.  In addition to the websites, I also had opportunities along the way to develop various webservices that are being heavily used in production.
+                    Working for a smaller company has allowed me to 'drink from the firehose' and gain exposure to many different disciplines.  My experience here has shown me that development
+                    is by far my passion and specialty.  I have been able to learn and continually provide solutions, and I would love the opportunity to do so for your company!
+                </p>
+                <h3 class="mt-4"><i class="pe-3 fa-solid fa-list-check"></i>Current Responsibilities</h3>
+                <p class="p-2"> I have currently taken on the role at my company as Security and Tech Services manager.  Some of my responsibilities include:</p>
                     <ul>
                         <li>Leading a team of four Network and System Administrators as a working manager</li>
                         <li>Delegating daily tasks, implementing procedures, and overseeing long term projects such as server OS upgrades, Office 365 migration, and web integrations.</li>
@@ -101,7 +104,18 @@ ADD SASS-->
                         <li>Overseeing and code review scripting, automation, and web contributions by team.</li>
                         <li>Continuing other prior duties such as web development, systems and network administration, vulnerability management, and automation.</li>
                     </ul>
-                <p> If you are an employer or recruiter and wish to obtain a copy of my resume, <a href="/contact">please contact me here</a></p>
+                <p class="p-2">
+                    If you are an employer or recruiter and wish to obtain a full copy of my resume, <a href="/contact">please contact me here</a>
+                </p>
+                <h3 class="mt-4"><i class="pe-3 fa-solid fa-user"></i>Personal</h3>
+                <p class="p-2">
+                    When I am not creating things with code, I am spending time with my family, outdoors, reading, and being involved in my home church <a href="https://gracefellowshipefc.org" target="_blank">Grace Fellowship</a> with 
+                    technology and children's ministries.
+                </p>
+                <h5 class="p-2">Verse of the day:</h5>
+                <p class="p-5 bg-dark-subtle">
+                    <script src="http://www.verse-a-day.com/js/NLT.js"></script>
+                <p>
             </div>
         </div>
     </section>
