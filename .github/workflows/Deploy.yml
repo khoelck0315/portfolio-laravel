@@ -37,7 +37,7 @@ jobs:
       id: compress
       with:
         command: c
-        cwd: .
+        cwd: ../
         files: |
           *
         outPath: potfolio-laravel.tar.gz
