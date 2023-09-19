@@ -47,12 +47,12 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
+        password: ${{ secrets.PORTFOLIO_SECRET }}
         port: ${{ secrets.PORT }}
         source: portfolio-laravel.tar.gz
         target: ~/
 
-    - name: print out example job
+    - name: Untar and copy the code to the webroot
       uses: appleboy/ssh-action@v0.1.10
       with:
         host: ${{ secrets.HOST }}
@@ -61,4 +61,5 @@ jobs:
         port: ${{ secrets.PORT }}
         command_timeout: 30m
         script: | 
-          echo "Nice Job!!!"
+          rm -rf portfolio-laravel
+          tar -xf portfolio-laravel.tar.gz -C ~/portfolio-laravel
