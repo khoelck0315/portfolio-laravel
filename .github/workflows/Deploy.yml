@@ -37,7 +37,7 @@ jobs:
       id: compress
       with:
         command: c
-        cwd: ${GITHUB_WORKSPACE} 
+        cwd: ${{ GITHUB_WORKSPACE }} 
         files: |
           *
         outPath: portfolio-laravel.tar.gz
