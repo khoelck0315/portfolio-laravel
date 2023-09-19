@@ -43,7 +43,7 @@ jobs:
         outPath: portfolio-laravel.tar.gz
           
     - name: SCP Files
-      uses: appleboy/scp-action@v0.0.1
+      uses: appleboy/scp-action@v0.0.7
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
