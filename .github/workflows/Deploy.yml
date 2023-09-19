@@ -40,7 +40,7 @@ jobs:
         cwd: ./portfolio-laravel
         files: |
           ./*
-          outPath: potfolio-laravel.tar.gz
+        outPath: potfolio-laravel.tar.gz
           
     - name: SCP Files
       uses: appleboy/scp-action@v0.0.1
