@@ -62,4 +62,7 @@ jobs:
         command_timeout: 30m
         script: | 
           rm -rf portfolio-laravel
+          mkdir portfolio-laravel
           tar -xf portfolio-laravel.tar.gz -C ~/portfolio-laravel
+          sudo cp -uvR ~/portfolio-laravel/* ~/htdocs
+          
