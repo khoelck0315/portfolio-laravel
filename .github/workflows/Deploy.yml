@@ -39,7 +39,7 @@ jobs:
         command: c
         cwd: ${{ github.workspace }} 
         files: |
-          *
+          ./
         outPath: portfolio-laravel.tar.gz
           
     - name: SCP Files
