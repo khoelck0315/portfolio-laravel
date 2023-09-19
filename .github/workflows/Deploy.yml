@@ -39,7 +39,7 @@ jobs:
         command: c
         cwd: ./portfolio-laravel
         files: |
-          ./*
+          *
         outPath: potfolio-laravel.tar.gz
           
     - name: SCP Files
