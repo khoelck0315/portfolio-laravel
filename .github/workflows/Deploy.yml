@@ -1,10 +1,10 @@
-name: Build & Deploy
+name: Build and deploy to AWS
 on: 
   push:
     branches:
       - master
 jobs:
-  Build:
+  build_and_deploy:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -31,11 +31,26 @@ jobs:
       with:
         # What version of Composer to use
         command: install
-      
+
+    - name: Deployment Tar Artifact Upload
+      uses: petemcw/deploy-artifact-upload@v1.0.0
+      with:
+        name: portfolio 
+
+    - name: SCP Files
+      uses: appleboy/scp-action@v0.0.1
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSWORD }}
+        port: ${{ secrets.PORT }}
+        source: portfolio
+        target: ~/
+
     - name: print out example job
       uses: appleboy/ssh-action@v0.1.10
       with:
-        host: 52.201.52.30
+        host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.PORTFOLIO_SECRET }}
         port: ${{ secrets.PORT }}
