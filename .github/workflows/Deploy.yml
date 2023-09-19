@@ -37,10 +37,10 @@ jobs:
       id: compress
       with:
         command: c
-        cwd: ../
+        cwd: ${GITHUB_WORKSPACE} 
         files: |
           *
-        outPath: potfolio-laravel.tar.gz
+        outPath: portfolio-laravel.tar.gz
           
     - name: SCP Files
       uses: appleboy/scp-action@v0.0.1
