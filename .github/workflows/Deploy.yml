@@ -31,12 +31,17 @@ jobs:
       with:
         # What version of Composer to use
         command: install
-
-    - name: Deployment Tar Artifact Upload
-      uses: petemcw/deploy-artifact-upload@v1.0.0
+    
+    - name: Compress action step
+      uses: a7ul/tar-action@v1.1.0
+      id: compress
       with:
-        name: portfolio 
-
+        command: c
+        cwd: ./portfolio-laravel
+        files: |
+          ./*
+          outPath: potfolio-laravel.tar.gz
+          
     - name: SCP Files
       uses: appleboy/scp-action@v0.0.1
       with:
@@ -44,7 +49,7 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        source: portfolio
+        source: portfolio-laravel.tar.gz
         target: ~/
 
     - name: print out example job
