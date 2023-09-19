@@ -1,8 +1,5 @@
 name: Build & Deploy
-on:
-  push:
-    tags:
-      - 'v1.*.0'
+on: [push]
 jobs:
   run_example_job:
     runs-on: ubuntu-latest
