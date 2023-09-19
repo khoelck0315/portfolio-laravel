@@ -1,10 +1,37 @@
 name: Build & Deploy
-on: [push]
+on: 
+  push:
+    branches:
+      - master
 jobs:
-  run_example_job:
+  Build:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
+    - name: Checkout
+      uses: actions/checkout@v4.0.0
+      with:
+        # Repository name with owner. For example, actions/checkout
+        repository: ${{ github.repository }}
+
+    - name: Setup Node
+      uses: actions/setup-node@v4
+      with:
+          node-version: 18.17.x
+          cache: npm
+
+    - name: Install node modules 
+      run: npm install
+
+    - name: Build node modules
+      run: npm run build
+
+    - name: Install composer dependencies
+      uses: baschny/php-composer-action@v1
+      with:
+        # What version of Composer to use
+        command: install
+      
     - name: print out example job
       uses: appleboy/ssh-action@v0.1.10
       with:
