@@ -65,10 +65,11 @@
                     <textarea name="message" id="message" class="w-100 form-control" style="height: 250px;" required></textarea>
                 </div>
             </div>
-            <!--TODO insert captcha-->
-            <!--https://artisansweb.net/add-i-m-not-robot-captcha-laravel-forms/-->
-            <button type="submit" class="btn btn-primary"><i class="fa-regular fa-paper-plane"></i> Send</button>
-            <button type="button" class="btn btn-danger" id="cancel"><i class="fa-solid fa-xmark"></i> Cancel</button>
+
+            <x-cloudflare-turnstile/>
+            
+            <button type="submit" class="btn btn-primary cloudflare-validate" id="submit" disabled><i class="fa-regular fa-paper-plane"></i> Send</button>
+            <button type="button" class="btn btn-danger cloudflare-validate" id="cancel" disabled><i class="fa-solid fa-xmark"></i> Cancel</button>
             <script>
                 let btn = document.getElementById('cancel');
                 btn.addEventListener('click', function(e) {

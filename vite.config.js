@@ -9,6 +9,7 @@ export default defineConfig({
 		        'resources/js/home.js',
 		        'resources/js/custom/scrolltracking.js',
                 'resources/js/app.js',
+                'resources/js/cloudflare-turnstile.js',
 		        'resources/css/home.css',
                 'resources/sass/app.scss',
             ],

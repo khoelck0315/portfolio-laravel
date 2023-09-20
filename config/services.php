@@ -33,4 +33,8 @@ return [
     'github' => [
         'pat' => env('GITHUB_PAT')
     ],
+    'cloudflare' => [
+        'sitekey' => env('CLOUDFLARE_SITE_KEY'),
+        'secretkey' => env('CLOUDFLARE_SECRET_KEY')
+    ],
 ];
