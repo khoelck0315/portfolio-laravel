@@ -1,5 +1,4 @@
 @extends('layouts.default', ['title' => "$user->name's Portfolio"])
-@vite(['resources/sass/github-lang-colors.scss'])
 
 
 @section('content')
