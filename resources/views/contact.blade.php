@@ -50,7 +50,6 @@
             </div>
             <div class="row mb-3">
                 <div class="col">
-                    <!--TODO insert checkbox for resume-->
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="Yes" name="resume">
                         <label class="form-check-label" for="flexCheckDefault">
