@@ -8,7 +8,6 @@ export default defineConfig({
 		        'resources/js/bootstrap.js',
 		        'resources/js/home.js',
 		        'resources/js/custom/scrolltracking.js',
-                'resources/js/app.js',
                 'resources/js/markdownapp.js',
                 'resources/js/cloudflare-turnstile.js',
 		        'resources/css/home.css',
