@@ -17,6 +17,8 @@
         "vite": "^4.0.0"
     },
     "dependencies": {
+        "marked": "^9.0.3",
+        "react-html-parser": "^2.0.2",
         "typeit": "^8.7.1"
     }
 }

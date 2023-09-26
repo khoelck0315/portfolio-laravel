@@ -1,0 +1,23 @@
+.pane {
+    height: 85vh;
+}
+
+#editorCard .card-body {
+    padding: 0px;
+}
+
+#editorCollapse {
+    border: 0px;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.card-body textarea {
+    border-bottom-left-radius: 0.375rem;
+    border-bottom-right-radius: 0.375rem;
+}
+
+.card-body textarea:focus-visible {
+    outline: transparent;
+}
