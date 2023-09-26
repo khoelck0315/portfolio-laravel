@@ -18,7 +18,7 @@ window.onloadTurnstileCallback = function () {
                 const formControls = document.querySelectorAll('.cloudflare-validate');
                 formControls.forEach((e) => e.disabled = false);
                 console.log(`Challenge Success!`);
-                window.turnstile.remove();
+                window.setTimeout(() => window.turnstile.remove(), 2000);
             }
             else {
                 window.turnstile.reset();
