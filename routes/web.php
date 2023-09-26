@@ -22,12 +22,13 @@ Route::controller(MessageController::class)->group(function() {
     Route::get('/contact', 'compose');
     Route::post('/contact', 'send');
 });
+Route::view('/thankyou', 'thankyou');
 
 Route::controller(PortfolioController::class)->group(function() {
     Route::get('/portfolio', 'myPortfolio');
     Route::post('/portfolio', 'userGithub');
 });
 
-Route::view('/thankyou', 'thankyou');
-
-
+Route::prefix('utilities')->group(function () {
+    Route::view('/markdown', 'markdownapp');
+});
