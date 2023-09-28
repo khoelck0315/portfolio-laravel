@@ -1,11 +1,12 @@
-<!--FONTAWESOME ICONS WHERE WE CAN in expanded aboutme section??
-ADD SASS-->
-
 @extends('layouts.default')
 @vite(['resources/css/home.css', 'resources/js/home.js'])
 
 @section('content')
     <!--left behind as example..-->
+    @if (isset($about_entry))
+        <input id="anchor" type="hidden" name="anchor" value="#about"/>
+    @endif
+
     @if (Route::has('login'))
         <div class="sm:fixed sm:top-0 sm:right-0 p-6 text-right z-10">
             @auth
@@ -24,7 +25,7 @@ ADD SASS-->
     <section class="container-fluid">
         <!--Change glow based on position of elements-->
         <div class="row mainview align-items-center vh-100">
-            <div class="col-md-4 text-dark">
+            <div class="col-md-4 text-dark-emphasis">
                 <div class="headings">
                     <div class="text-start p-md-5">
                         <h1>Kevin Hoelck</h1>
@@ -77,7 +78,7 @@ ADD SASS-->
         </div>
     </section>
     <section id="about" class="container-fluid mt-5 mb-5 p-5">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center mt-4">
             <div class="col-md-8">
                 <!-- Show icons for certifications-->
                 

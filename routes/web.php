@@ -17,6 +17,7 @@ use App\Http\Controllers\MessageController;
 */
 
 Route::get('/', HomeController::class)->name('home');
+Route::get('/about', HomeController::class)->name('about');
 
 Route::controller(MessageController::class)->group(function() {
     Route::get('/contact', 'compose');
@@ -30,5 +31,5 @@ Route::controller(PortfolioController::class)->group(function() {
 });
 
 Route::prefix('utilities')->group(function () {
-    Route::view('/markdown', 'markdownapp');
+    Route::view('/markdown', 'markdownapp', ['page' => 'utility']);
 });

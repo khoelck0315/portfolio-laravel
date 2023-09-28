@@ -4,12 +4,14 @@ import TypeIt from "typeit";
 // Add Scroll effect listener
 document.addEventListener("scroll", ScrollHandler);
 
+// Add handler for about entry
+let anchor = document.getElementById('anchor') || false;
+if(anchor !== false) {
+  window.location.hash = anchor.value;
+}
+
 // Typing effect
 // https://www.typeitjs.com/
-//Procedural
-// start at bash prompt with diff color text, execute vim 
-// once loaded, type desired text
-// could even save, close, cat file to display text
 
 const typewriter = new TypeIt("#introtext", {
   speed: 75,
@@ -46,12 +48,10 @@ typewriter.move(null, {instant: true})
   .delete(17, {delay: 800})
   .type("full stack web developer.", {delay: 800})
   .break()
-  .type("Although I have had a few official titles, none of them have been in a development role.", {delay: 100})
+  .type("Although I have had a few official titles, none of them have been in a development role.  ", {delay: 200})
+  .type("However, I have been the primary backend and frontend web developer at my company for the past four years.", {delay: 200})
   .break()
-  .type("However, I have been the primary backend and frontend web developer at my company for the past four years.", {delay: 100})
-  .break()
-  .type("Writing code is my passion, and I hope to soon land my first official development role.  Scroll down", {delay: 100})
-  .break()
+  .type("Writing code is my passion, and I hope to soon land my first official development role.  Scroll down ", {delay: 200})
   .type("to learn more about my skills and how I can become an asset to your development team!", {delay: 800})
 
 
@@ -80,12 +80,10 @@ typewriter.type("cat summary")
   .break()
   .type("Hello, my name is Kevin Hoelck and I am a full stack web developer.", {instant: true})
   .break()
-  .type("Although I have had a few official titles, none of them have been in a development role.", {instant: true})
-  .break()
+  .type("Although I have had a few official titles, none of them have been in a development role.  ", {instant: true})
   .type("However, I have been the primary backend and frontend web developer at my company for the past four years.", {instant: true})
   .break()
-  .type("Writing code is my passion, and I hope to soon land my first official development role.  Scroll down", {instant: true})
-  .break()
+  .type("Writing code is my passion, and I hope to soon land my first official development role.  Scroll down ", {instant: true})
   .type("to learn more about my skills and how I can become an asset to your development team!", {instant: true})
   .break()
   .type("[khoelck0315@localdev portfolio]$ ", {instant:true})
