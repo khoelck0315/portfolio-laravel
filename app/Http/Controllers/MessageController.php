@@ -12,7 +12,8 @@ class MessageController extends Controller
 {
     public function compose() {
         //return view to compose new message
-        return view("contact");
+        return view("contact")
+        ->with('page', 'contact');
     }
     
     public function send(Request $request): RedirectResponse {

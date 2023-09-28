@@ -6,21 +6,52 @@
     <div class="collapse navbar-collapse ms-sm-5" id="navLinks">
       <ul class="navbar-nav mb-2 mb-lg-0 fs-4">
         <li class="nav-item">
-          <!--TODO Add onclick logic to make active since it's an in page link-->
-          <!--TODO need to add hover effect for buttons also, swiping underline/color change??-->
-          <a class="nav-link" aria-current="page" href="{{ route("home") }}">Home</a>
+          <a @class([
+              'nav-link',
+              'focus' => ($page == "home"),
+             ])
+            aria-current="page"
+            href="
+              @if($page == "home" || $page == "about")
+                {{ "#" }}
+              @else
+                {{ route("home") }}
+              @endif
+            "
+          >Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/#about">About</a>
+          <a @class([
+              'nav-link',
+              'focus' => ($page == "about"),
+             ])
+            aria-current="page"
+            href="
+              @if($page == "home" || $page == "about")
+                {{ "#about" }}
+              @else
+                {{ route("about") }}
+              @endif
+            "
+          >About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/portfolio">Portfolio</a>
+          <a @class([
+            'nav-link',
+            'focus' => ($page == "portfolio"),
+          ]) href="/portfolio">Portfolio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/contact">Contact</a>
+          <a @class([
+            'nav-link',
+            'focus' => ($page == "contact"),
+          ]) href="/contact">Contact</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <a @class([
+            'nav-link',
+            'focus' => ($page == "utility"),
+          ]) href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Utilities
           </a>
           <ul class="dropdown-menu">
@@ -35,3 +66,4 @@
     </div>
   </div>
 </nav>
+@vite(['resources/js/navbar.js'])

@@ -10,6 +10,7 @@ export default defineConfig({
 		        'resources/js/custom/scrolltracking.js',
                 'resources/js/markdownapp.js',
                 'resources/js/cloudflare-turnstile.js',
+                'resources/js/navbar.js',
 		        'resources/css/home.css',
                 'resources/sass/app.scss',
                 'resources/sass/markdownapp.scss'

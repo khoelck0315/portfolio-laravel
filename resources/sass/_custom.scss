@@ -1,5 +1,4 @@
-/*Example of over-riding bootstrap defaults*/
-
+/*Bootstrap overrides for nav bar*/
 .nav-link {
     color: $nav-links;
 }
@@ -9,6 +8,41 @@
     padding-right: 10px;
 }
 
+.dropdown-item:active,
+.dropdown-item:hover {
+    background-color: $secondary;
+}
+
+
+/* Fade in underline effect */
+.nav-item>a {
+    display: block;
+    position: relative;
+    padding: 0.2em 0;
+}
+
+.nav-item>a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.1em;
+    background-color: $accent;
+    opacity: 0;
+    transition: opacity 300ms, transform 300ms;
+    transform-origin: center;
+    transform: translate3d(0, 0, 0) scale(0);
+}
+
+.nav-item>a:hover::after,
+.nav-item>a:focus::after,
+.nav-item>a.focus::after {
+    opacity: 1;
+    transform: translate3d(0, 0.01em, 0) scale(1);
+}
+
+/* Progress bar overrides for Portfolio page */
 .progress-bar {
     text-align: left;
     padding-left: 1em;

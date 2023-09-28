@@ -16,6 +16,7 @@ class PortfolioController extends Controller
         
         return view('portfolio')
             ->with('user', $user)
+            ->with('page', 'portfolio')
             ->with('repositories', $repos)
             ->with('languages', $languages);
     }
